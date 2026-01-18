@@ -1,0 +1,5 @@
+{
+  "name": "Vision Chess Play",
+  "description": "A sophisticated React application that converts chessboard images into playable chess matches using Gemini Vision, featuring a full move-validation engine and a polished dark-themed UI.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VISION CORE | Neural Chess Intelligence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Stockfish.js Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stockfish.js/10.0.2/stockfish.js"></script>
+
+  <style>
+    body {
+      background-color: #020617;
+      color: #f8fafc;
+      margin: 0;
+      overflow-x: hidden;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    
+    /* Modern Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #020617;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.5)); }
+      50% { opacity: 0.8; filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.8)); }
+    }
+    .ai-active {
+      animation: pulse-glow 2s infinite;
+    }
+
+    /* Range Input Custom Styling */
+    input[type=range]::-webkit-slider-thumb {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: #38bdf8;
+      cursor: pointer;
+      appearance: none;
+      border: 4px solid #0f172a;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "chess.js": "https://esm.sh/chess.js@^1.0.0-beta.8"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
